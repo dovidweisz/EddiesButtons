@@ -1,0 +1,37 @@
+@function smart-scale($color, $scale: 5%, $threshold: 40%) {
+  @if lightness($color) > $threshold {
+    $scale: -$scale;
+  }
+  @return scale-color($color, $lightness: $scale);
+}
+
+$global-weight-semi-bold: 600;
+$hawaii: #0a92ca;
+$water: #d9e3ed;
+$night: #334455;
+$blue4: #1a5888;
+$grey6: #dfdfdf;
+$black: #000;
+$white: #fff;
+$button-radius: 4px;
+
+$button-margin: 1em;
+
+$bh-button-height: 2.5em !default;
+$bh-button-default-weight: $global-weight-semi-bold !default;
+
+$bh-button-colors: (
+  primary1: $hawaii,
+  primary2: $blue4,
+  secondary1: $water #415160,
+  secondary2: #959fa9,
+  load-more-btn-color: #6a757e,
+  tertiary-btn-color: $grey6 $black,
+  load-more: #6a757e
+);
+$bh-default-button-color: tertiary-btn-color;
+
+@mixin sync-line-height($container-height) {
+  height: $container-height;
+  line-height: $container-height;
+}

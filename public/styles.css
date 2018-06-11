@@ -1,0 +1,216 @@
+.button {
+  display: inline-block;
+  text-align: center;
+  cursor: pointer;
+  -webkit-appearance: none;
+  vertical-align: middle;
+  border-radius: 4px;
+  margin: 1em;
+  height: 2.5em;
+  line-height: 2.5em;
+  padding: 0 2em;
+  font-weight: 600;
+  border: 1px solid;
+  background-color: #dfdfdf;
+  color: #000;
+  border-color: #dfdfdf;
+}
+.button.wide {
+  padding: 0 3em;
+}
+.button.x-wide {
+  padding: 0 4em;
+}
+.button.large {
+  padding: 0 4em;
+  height: 3.25em;
+  line-height: 3.25em;
+}
+.button.fit-width {
+  display: block;
+  width: 100%;
+  margin-left: 0;
+  margin-right: 0;
+  padding: 0;
+}
+.button.small {
+  height: 2em;
+  line-height: 2em;
+  padding: 0 1em;
+}
+.button:hover {
+  background-color: #c9c9c9;
+}
+.button.ghost {
+  background-color: transparent;
+  color: #dfdfdf;
+}
+.button.ghost:hover {
+  background-color: rgba(223, 223, 223, 0.05);
+}
+.button.primary1,
+.button.primary1-color {
+  background-color: #0a92ca;
+  color: #fff;
+  border-color: #0a92ca;
+}
+.button.primary1:hover,
+.button.primary1-color:hover {
+  background-color: #0983b6;
+}
+.button.primary1.ghost,
+.button.primary1-color.ghost {
+  background-color: transparent;
+  color: #0a92ca;
+}
+.button.primary1.ghost:hover,
+.button.primary1-color.ghost:hover {
+  background-color: rgba(10, 146, 202, 0.05);
+}
+.button.primary2,
+.button.primary2-color {
+  background-color: #1a5888;
+  color: #fff;
+  border-color: #1a5888;
+}
+.button.primary2:hover,
+.button.primary2-color:hover {
+  background-color: #206ba5;
+}
+.button.primary2.ghost,
+.button.primary2-color.ghost {
+  background-color: transparent;
+  color: #1a5888;
+}
+.button.primary2.ghost:hover,
+.button.primary2-color.ghost:hover {
+  background-color: rgba(26, 88, 136, 0.05);
+}
+.button.secondary1,
+.button.secondary1-color {
+  background-color: #d9e3ed;
+  color: #415160;
+  border-color: #d9e3ed;
+}
+.button.secondary1:hover,
+.button.secondary1-color:hover {
+  background-color: #baccde;
+}
+.button.secondary1.ghost,
+.button.secondary1-color.ghost {
+  background-color: transparent;
+  color: #d9e3ed;
+}
+.button.secondary1.ghost:hover,
+.button.secondary1-color.ghost:hover {
+  background-color: rgba(217, 227, 237, 0.05);
+}
+.button.secondary2,
+.button.secondary2-color {
+  background-color: #959fa9;
+  color: #fff;
+  border-color: #959fa9;
+}
+.button.secondary2:hover,
+.button.secondary2-color:hover {
+  background-color: #838f9b;
+}
+.button.secondary2.ghost,
+.button.secondary2-color.ghost {
+  background-color: transparent;
+  color: #959fa9;
+}
+.button.secondary2.ghost:hover,
+.button.secondary2-color.ghost:hover {
+  background-color: rgba(149, 159, 169, 0.05);
+}
+.button.load-more-btn-color,
+.button.load-more-btn-color-color {
+  background-color: #6a757e;
+  color: #fff;
+  border-color: #6a757e;
+}
+.button.load-more-btn-color:hover,
+.button.load-more-btn-color-color:hover {
+  background-color: #5f6971;
+}
+.button.load-more-btn-color.ghost,
+.button.load-more-btn-color-color.ghost {
+  background-color: transparent;
+  color: #6a757e;
+}
+.button.load-more-btn-color.ghost:hover,
+.button.load-more-btn-color-color.ghost:hover {
+  background-color: rgba(106, 117, 126, 0.05);
+}
+.button.load-more,
+.button.load-more-color {
+  background-color: #6a757e;
+  color: #fff;
+  border-color: #6a757e;
+}
+.button.load-more:hover,
+.button.load-more-color:hover {
+  background-color: #5f6971;
+}
+.button.load-more.ghost,
+.button.load-more-color.ghost {
+  background-color: transparent;
+  color: #6a757e;
+}
+.button.load-more.ghost:hover,
+.button.load-more-color.ghost:hover {
+  background-color: rgba(106, 117, 126, 0.05);
+}
+
+body {
+  font-family: "Open sans";
+}
+
+button {
+  font-size: inherit;
+  font-family: inherit;
+}
+
+.top-wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: white;
+}
+
+.button-container {
+  max-width: 800px;
+  height: 100px;
+  border: 1px solid black;
+  text-align: center;
+  padding: 1em;
+  margin: 1em;
+}
+.button-container input {
+  width: 300px;
+}
+
+.other-container {
+  margin-top: 175px;
+}
+
+.form-row {
+  margin: 1em;
+  max-width: 500px;
+  text-align: center;
+}
+
+.loading {
+  position: relative;
+}
+
+.app {
+  font-size: 16px;
+}
+
+input[type="button"] {
+  font-size: inherit;
+  font-family: inherit;
+}
