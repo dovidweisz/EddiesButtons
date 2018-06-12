@@ -1,7 +1,7 @@
-import * as React from "react";
-import { IButtonBaseProps } from "../Button";
+import * as React from 'react';
+import { ButtonBaseProps } from '../Button';
 
-interface CodeDisplayProps extends IButtonBaseProps {
+interface CodeDisplayProps extends ButtonBaseProps {
   children: string;
 }
 
@@ -17,10 +17,10 @@ export const CodeDisplay = ({
     <code>
       &lt;Button
       {color && ` color="${color}"`}
-      {ghost && " ghost"}
-      {small && " small"}
+      {ghost && ' ghost'}
+      {small && ' small'}
       {width && ` width="${width}"`}
-      {large && " large"}
+      {large && ' large'}
       &gt;
       {children}
       &lt;/Button&gt;
@@ -29,10 +29,10 @@ export const CodeDisplay = ({
     <code>
       &lt;InputButton value="{children}"
       {color && ` color="${color}"`}
-      {ghost && " ghost"}
-      {small && " small"}
+      {ghost && ' ghost'}
+      {small && ' small'}
       {width && ` width="${width}"`}
-      {large && " large"}
+      {large && ' large'}
       /&gt;
     </code>
   </div>

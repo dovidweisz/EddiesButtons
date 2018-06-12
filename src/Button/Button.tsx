@@ -1,29 +1,29 @@
-import * as React from "react";
+import * as React from 'react';
 import {
   ButtonHTMLAttributes,
   InputHTMLAttributes,
   HTMLAttributes
-} from "react";
+} from 'react';
 
 export type buttonColor =
-  | "primary1"
-  | "primary2"
-  | "secondary1"
-  | "secondary2"
-  | "load-more"
-  | "tertiary";
+  | 'primary1'
+  | 'primary2'
+  | 'secondary1'
+  | 'secondary2'
+  | 'load-more'
+  | 'tertiary';
 
-export interface IButtonBaseProps {
+export interface ButtonBaseProps {
   color?: buttonColor;
   ghost?: boolean;
   small?: boolean;
-  width?: "wide" | "x-wide" | "fit-width";
+  width?: 'wide' | 'x-wide' | 'fit-width' | null;
   large?: boolean;
 }
 
-export type IButtonProps = IButtonBaseProps &
+export type IButtonProps = ButtonBaseProps &
   ButtonHTMLAttributes<HTMLButtonElement>;
-export type IInputButtonProps = IButtonBaseProps &
+export type IInputButtonProps = ButtonBaseProps &
   InputHTMLAttributes<HTMLInputElement>;
 
 export const ButtonBase = ({
@@ -35,22 +35,21 @@ export const ButtonBase = ({
   className,
   children,
   ...otherAttributes
-}: IButtonBaseProps &
+}: ButtonBaseProps &
   HTMLAttributes<HTMLElement> & { children: (props: any) => any }) => {
-  const colorClass = color ? color : "";
-  const ghostClass = ghost ? "ghost" : "";
+  const colorClass = color ? color : '';
+  const ghostClass = ghost ? 'ghost' : '';
 
   const sizeClasses = small
-    ? "small"
-    : `${width ? width : ""} ${large ? "large" : ""}`;
-  const parentClassname = className ? className : "";
+    ? 'small'
+    : `${width ? width : ''} ${large ? 'large' : ''}`;
+  const parentClassname = className ? className : '';
 
   className = `${parentClassname} button ${colorClass} ${ghostClass} ${sizeClasses}`;
   return children({ ...otherAttributes, className });
 };
 
-export const Button = (props: IButtonProps) => {
-  const { children, ...otherAttributes } = props;
+export const Button = ({ children, ...otherAttributes }: IButtonProps) => {
   return (
     <ButtonBase {...otherAttributes}>
       {props => <button {...props}>{children}</button>}
@@ -58,9 +57,9 @@ export const Button = (props: IButtonProps) => {
   );
 };
 
-export const InputButton = (props: IInputButtonProps) => {
+export const InputButton = (inputProps: IInputButtonProps) => {
   return (
-    <ButtonBase {...props}>
+    <ButtonBase {...inputProps}>
       {props => <input type="button" {...props} />}
     </ButtonBase>
   );

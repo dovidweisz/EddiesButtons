@@ -1,10 +1,10 @@
-import * as React from "react";
-import { render } from "react-dom";
-import { ButtonPlayground } from "./ButtonPlayground/";
+import * as React from 'react';
+import { render } from 'react-dom';
+import { ButtonPlayground } from './ButtonPlayground/';
 
 const styles = {
-  fontFamily: "sans-serif",
-  textAlign: "center"
+  fontFamily: 'sans-serif',
+  textAlign: 'center'
 };
 
 const App = () => (
@@ -13,4 +13,4 @@ const App = () => (
   </div>
 );
 
-render(<App />, document.getElementById("root"));
+render(<App />, document.getElementById('root'));

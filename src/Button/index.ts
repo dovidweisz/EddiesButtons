@@ -1,1 +1,1 @@
-export { buttonColor, Button, InputButton, IButtonBaseProps } from "./Button";
+export { buttonColor, Button, InputButton, ButtonBaseProps } from './Button';
