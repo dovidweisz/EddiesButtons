@@ -1,33 +1,33 @@
-import * as React from "react";
-import { buttonColor, Button, InputButton, IButtonBaseProps } from "../Button";
+import * as React from 'react';
+import { buttonColor, Button, InputButton, ButtonBaseProps } from '../Button';
 
-import { CodeDisplay } from "./CodeDisplay";
+import { CodeDisplay } from './CodeDisplay';
 
 const _buttonColors: buttonColor[] = [
-  "primary1",
-  "primary2",
-  "secondary1",
-  "secondary2",
-  "load-more",
-  "tertiary"
+  'primary1',
+  'primary2',
+  'secondary1',
+  'secondary2',
+  'load-more',
+  'tertiary'
 ];
 
-const _ghostableColors = new Set(["primary1", "primary2"]);
-const _buttonWidths: Array<null | "wide" | "x-wide" | "fit-width"> = [
+const _ghostableColors = new Set(['primary1', 'primary2']);
+const _buttonWidths: Array<null | 'wide' | 'x-wide' | 'fit-width'> = [
   null,
-  "wide",
-  "x-wide",
-  "fit-width"
+  'wide',
+  'x-wide',
+  'fit-width'
 ];
 
-interface PlaygroundState extends IButtonBaseProps {
+interface PlaygroundState extends ButtonBaseProps {
   children: string;
   fontSize: number;
 }
 
 export class ButtonPlayground extends React.Component<any, PlaygroundState> {
   state: PlaygroundState = {
-    children: "Add to Cart",
+    children: 'Add to Cart',
     fontSize: 16
   };
   render() {
@@ -134,11 +134,14 @@ export class ButtonPlayground extends React.Component<any, PlaygroundState> {
   };
 
   setSmall = () => {
-    this.setState(prevState => ({
-      small: !prevState.small,
-      width: null,
-      large: false
-    }));
+    this.setState(prevState => {
+      const small = !prevState.small;
+      return {
+        small,
+        width: null,
+        large: false
+      };
+    });
   };
   setWidth = event => {
     const newWidth = event.target.value;
@@ -163,5 +166,11 @@ export class ButtonPlayground extends React.Component<any, PlaygroundState> {
   };
 
   handleInputChange = event =>
-    this.setState({ [event.target.name]: event.target.value });
+    this.setState(
+      () =>
+        ({ [event.target.name]: event.target.value } as Pick<
+          PlaygroundState,
+          'children' | 'fontSize'
+        >)
+    );
 }
