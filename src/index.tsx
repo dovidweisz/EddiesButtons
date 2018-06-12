@@ -1,6 +1,6 @@
 import * as React from "react";
 import { render } from "react-dom";
-import { ButtonPlayground } from "./ButtonPlayground";
+import { ButtonPlayground } from "./ButtonPlayground/";
 
 const styles = {
   fontFamily: "sans-serif",

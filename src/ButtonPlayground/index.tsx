@@ -1,5 +1,7 @@
 import * as React from "react";
-import { buttonColor, Button, InputButton, IButtonBaseProps } from "./Button";
+import { buttonColor, Button, InputButton, IButtonBaseProps } from "../Button";
+
+import { CodeDisplay } from "./CodeDisplay";
 
 const _buttonColors: buttonColor[] = [
   "primary1",
@@ -36,32 +38,7 @@ export class ButtonPlayground extends React.Component<any, PlaygroundState> {
             <div style={{ fontSize: `${this.state.fontSize}px` }}>
               <Button {...this.state} />
             </div>
-            <code>
-              &lt;Button
-              {this.state.color && ` color="${this.state.color}"`}
-              {_ghostableColors.has(this.state.color!) &&
-                this.state.ghost &&
-                " ghost"}
-              {this.state.small && " small"}
-              {this.state.width && ` width="${this.state.width}"`}
-              {this.state.large && " large"}
-              &gt;
-              {this.state.children}
-              &lt;/Button&gt;
-            </code>
-            <br />
-            <code>
-              &lt;InputButton value="{this.state.children}"
-              {this.state.color && ` color="${this.state.color}"`}
-              {this.state.color &&
-                _ghostableColors.has(this.state.color) &&
-                this.state.ghost &&
-                " ghost"}
-              {this.state.small && " small"}
-              {this.state.width && ` width="${this.state.width}"`}
-              {this.state.large && " large"}
-              /&gt;
-            </code>
+            <CodeDisplay {...this.state} />
           </div>
         </div>
         <div className="other-container">
