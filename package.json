@@ -1,5 +1,5 @@
 {
-  "name": "my-app",
+  "name": "eddiesbuttons",
   "version": "0.1.0",
   "private": true,
   "main": "src/index.tsx",
@@ -23,5 +23,7 @@
     "prettier": "^1.13.5",
     "tslint-config-prettier": "^1.13.0",
     "typescript": "^2.7.2"
-  }
+  },
+  "keywords": [],
+  "description": ""
 }
